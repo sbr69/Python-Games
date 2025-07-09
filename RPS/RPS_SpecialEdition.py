@@ -42,9 +42,10 @@ Welcome to our interactive game of Rock, Paper, Scissors!\n
 Rules of the game-
 User has to choose among Rock/Paper/Scissors and compete with the computer
    winning criteria-
-   {choice_list[0]} beats {choice_list[2]}
-   {choice_list[1]} beats {choice_list[0]}
-   {choice_list[2]} beat {choice_list[1]}
+   {choice_list[0]} beats {choice_list[1]} [Rock tears through Paper]
+   {choice_list[1]} beats {choice_list[2]} [Paper wraps Scissors]
+   {choice_list[2]} beat {choice_list[0]} [Scissors rip through Rock]
+Good Luck! Hope you enjoy our game!!
 """
 header2 = """
 Enter Your choice:
@@ -86,7 +87,7 @@ while True:
         round_result = "\033[33mIt's a tie!\033[0m"
         user_score+=1
         computer_score+=1
-    elif (user_choice==choice_list[0] and computer_choice==choice_list[2]) or (user_choice==choice_list[1] and computer_choice==choice_list[0]) or (user_choice==choice_list[2] and computer_choice==choice_list[1]):
+    elif (user_choice==choice_list[0] and computer_choice==choice_list[1]) or (user_choice==choice_list[2] and computer_choice==choice_list[0]) or (user_choice==choice_list[1] and computer_choice==choice_list[2]):
         round_result = "\033[32mYou win!\033[0m"
         user_score+=1
     else:
